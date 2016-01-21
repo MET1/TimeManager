@@ -1,0 +1,7 @@
+#importPane {
+    -fx-background-image: url("../images/ellsberg.jpg");
+    -fx-opacity: 0.15;
+    -fx-background-repeat: stretch;
+    -fx-background-size: 900 506;
+    -fx-background-position: center center;
+}
