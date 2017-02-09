@@ -262,8 +262,7 @@ public class Controller implements Initializable {
         }
         tvData.setItems(obsData);
         dataDisplay = data;
-        //if (name != null && name.equals("GNA")) minutes *= 1.5;
-        //if (name != null && name.equals("PON")) minutes *= 1.5;
+
         setInfo(minutes, entries);
         btnSaveData.setStyle("");
     }
@@ -413,8 +412,6 @@ public class Controller implements Initializable {
                     minutes += MyUtils.strToInt(row[3]);
                 }
             }
-            //if (name != null && name.equals("GNA")) minutes *= 1.5;
-            //if (name != null && name.equals("PON")) minutes *= 1.5;
             pieChartData.add(new PieChart.Data(obsMembers.get(i), minutes));
         }
         pieChart.setData(pieChartData);
