@@ -1,0 +1,11 @@
+#importPane {
+    -fx-background-image: url("../images/gruenburg.jpg");
+    -fx-opacity: 1;
+    -fx-background-size: stretch;
+    -fx-background-position: center center;
+}
+
+.taSettings, .taSettings .viewport, .taSettings .content {
+    -fx-padding: 0px;
+    -fx-background-color: transparent ;
+}

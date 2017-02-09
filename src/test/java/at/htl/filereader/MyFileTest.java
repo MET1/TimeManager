@@ -3,17 +3,16 @@ package at.htl.filereader;
 import org.junit.Test;
 
 import java.io.File;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.Map;
 
 /**
- * @timeline Test
- *
+ * @timeline .
+ * 21.12.2015: MET 001  created test class
  */
 public class MyFileTest {
 
@@ -44,7 +43,7 @@ public class MyFileTest {
 
     @Test
     public void testSearchFile() throws Exception {
-        File file = new File("/Users/MET/IdeaProjects/SYP/v1.6.6");
+        File file = new File("/Users/MET/IdeaProjects/SYP/Testumgebung");
         List<String> extensions = new LinkedList<String>();
         extensions.add("java");
         System.out.println("started filtering files ...");
@@ -60,31 +59,43 @@ public class MyFileTest {
         }
 
         DateTimeFormatter dtfFile = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");
-
-        MyFile.writeToCsvFile(data, "/Users/MET/Dropbox/test_" +
-                dtfFile.format(LocalDateTime.now()) + ".csv");
-
-        boolean reverse = false;
-        String p1 = "20.10.2015";
-        String p2 = "31.10.2015";
-        SimpleDateFormat df = new SimpleDateFormat("dd.MM.yyyy");
-
-        List<String[]> met = data.stream()
-                .filter(p -> p[2].equals("MET"))
-                .filter(p -> {
-                    try {
-                        return df.parse(p[1]).compareTo(df.parse(p1)) != -1
-                                && df.parse(p[1]).compareTo(df.parse(p2)) != 1;
-                    } catch (ParseException e) {
-                        return false;
-                    }
-                })
-                .sorted((e1, e2) -> reverse ? e2[1].compareTo(e1[1]) : e1[1].compareTo(e2[1]))
-                .collect(Collectors.toList());
-
-        MyFile.writeToCsvFile(met, "/Users/MET/Dropbox/test_MET_" +
-                dtfFile.format(LocalDateTime.now()) + ".csv");
+        List<String> members = MyFile.getMembers(data);
+        for (String member : members) {
+            System.out.println(member);
+        }
+        MyFile.writeToCsvFile(data,
+                "/Users/MET/Dropbox/test_" + dtfFile.format(LocalDateTime.now()) + ".csv");
+        //MyFile.writeToCsvFile(MyFile.getSpecificData(obsData, "MET", "20.10.2015", "31.10.2015", false),
+        //      "/Users/MET/Dropbox/test_MET_" + dtfFile.format(LocalDateTime.now()) + ".csv");
 
     }
+
+
+    @Test
+    public void testName() throws Exception {
+
+        //System.out.println(LocalDate.parse("21.10.2015", DateTimeFormatter.BASIC_ISO_DATE));
+
+        double hours = 4000 / 60.0;
+        System.out.println(String.format("Total time:  %1.2f hr", hours));
+        int minutes = 4000;
+        System.out.println(String.format("Total time:  %1.2f hr", minutes / 60.0));
+    }
+
+    @Test
+    public void testName2() throws Exception {
+        LocalDate date = LocalDate.parse("2015-09-15", DateTimeFormatter.ISO_DATE);
+        Map<String, Integer> months = MyUtils.initLineChartData(date);
+        System.out.println(months);
+        System.out.println(LocalDate.parse("2016-01-01", DateTimeFormatter.ISO_DATE).format(MyUtils.MONTH_YEAR_FORMAT));
+    }
+
+    @Test
+    public void testName3() throws Exception {
+        System.out.println(new File("/x.csv").getParentFile().getPath());
+        System.out.println(new File("/test/x").getParentFile().getPath());
+        System.out.println(new File("/test/x.csv").getParentFile().getPath());
+    }
+
 
 }
