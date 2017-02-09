@@ -22,6 +22,7 @@ import static javafx.stage.FileChooser.ExtensionFilter;
  * 15.04.2016: MET 005  converting LocalDate in Date
  * 17.03.2016: MET 015  functions: getCheckBoxExtensions(), getSelectedExtensions()
  * 28.05.2016: MET 010  initialize data of the line diagram
+ *
  */
 public class MyUtils {
 
