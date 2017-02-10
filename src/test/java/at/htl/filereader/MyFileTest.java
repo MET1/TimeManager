@@ -4,10 +4,7 @@ import org.junit.Test;
 
 import java.io.File;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -43,7 +40,7 @@ public class MyFileTest {
 
     @Test
     public void testSearchFile() throws Exception {
-        File file = new File("/Users/MET/IdeaProjects/SYP/Testumgebung");
+        /*File file = new File("/Users/MET/IdeaProjects/SYP/Testumgebung");
         List<String> extensions = new LinkedList<String>();
         extensions.add("java");
         System.out.println("started filtering files ...");
@@ -67,6 +64,7 @@ public class MyFileTest {
                 "/Users/MET/Dropbox/test_" + dtfFile.format(LocalDateTime.now()) + ".csv");
         //MyFile.writeToCsvFile(MyFile.getSpecificData(obsData, "MET", "20.10.2015", "31.10.2015", false),
         //      "/Users/MET/Dropbox/test_MET_" + dtfFile.format(LocalDateTime.now()) + ".csv");
+        */
 
     }
 
