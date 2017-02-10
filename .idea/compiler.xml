@@ -23,10 +23,12 @@
         <processorPath useClasspath="true" />
         <module name="BadWhistleBlower" />
         <module name="FileReader" />
+        <module name="TimeManager" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
       <module name="BadWhistleBlower" target="1.8" />
+      <module name="TimeManager" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
