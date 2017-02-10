@@ -1,6 +1,6 @@
-package at.htl.filereader.taskmanager.table;
+package at.htl.timemanager.tasks.table;
 
-import at.htl.filereader.taskmanager.entity.Task;
+import at.htl.timemanager.tasks.entity.Task;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableCell;
 

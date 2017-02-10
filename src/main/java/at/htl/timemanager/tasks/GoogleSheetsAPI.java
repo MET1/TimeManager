@@ -1,4 +1,4 @@
-package at.htl.filereader.taskmanager;
+package at.htl.timemanager.tasks;
 
 
 import com.google.gdata.client.spreadsheet.FeedURLFactory;

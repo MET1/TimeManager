@@ -1,4 +1,4 @@
-package at.htl.filereader.taskmanager;
+package at.htl.timemanager.tasks;
 
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;

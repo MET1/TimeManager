@@ -62,7 +62,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>at.htl.filereader.FileReaderGui</mainClass>
+                            <mainClass>at.htl.timemanager.TimeManagerGui</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

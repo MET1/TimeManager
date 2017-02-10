@@ -1,9 +1,9 @@
-package at.htl.filereader;
+package at.htl.timemanager;
 
-import at.htl.filereader.taskmanager.GoogleSheetsAPI;
-import at.htl.filereader.taskmanager.entity.Task;
-import at.htl.filereader.taskmanager.table.DatePickerCell;
-import at.htl.filereader.taskmanager.table.TextAreaCell;
+import at.htl.timemanager.tasks.GoogleSheetsAPI;
+import at.htl.timemanager.tasks.entity.Task;
+import at.htl.timemanager.tasks.table.DatePickerCell;
+import at.htl.timemanager.tasks.table.TextAreaCell;
 import javafx.beans.property.ReadOnlyDoubleProperty;
 import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.beans.property.SimpleStringProperty;

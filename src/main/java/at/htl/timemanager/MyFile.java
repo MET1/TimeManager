@@ -1,4 +1,4 @@
-package at.htl.filereader;
+package at.htl.timemanager;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;

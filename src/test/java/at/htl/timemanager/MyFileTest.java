@@ -1,4 +1,4 @@
-package at.htl.filereader;
+package at.htl.timemanager;
 
 import org.junit.Test;
 

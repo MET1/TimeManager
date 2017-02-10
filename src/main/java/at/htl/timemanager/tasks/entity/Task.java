@@ -1,4 +1,4 @@
-package at.htl.filereader.taskmanager.entity;
+package at.htl.timemanager.tasks.entity;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

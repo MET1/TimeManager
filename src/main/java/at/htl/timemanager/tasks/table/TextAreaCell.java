@@ -1,4 +1,4 @@
-package at.htl.filereader.taskmanager.table;
+package at.htl.timemanager.tasks.table;
 
 import javafx.beans.binding.Bindings;
 import javafx.beans.property.ObjectProperty;

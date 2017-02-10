@@ -1,4 +1,4 @@
-package at.htl.filereader;
+package at.htl.timemanager;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -18,7 +18,7 @@ import javafx.stage.Stage;
  * 27.05.2016: MET 060  GUI more user-friendly designed (Tabs: Settings, Import)
  * 27.05.2016: MET 003  Prompt text for source and target directory
  */
-public class FileReaderGui extends Application {
+public class TimeManagerGui extends Application {
 
     public static void main(String[] args) {
         launch(args);
@@ -26,7 +26,7 @@ public class FileReaderGui extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/FileReader.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/TimeManager.fxml"));
 
         Scene scene = new Scene(root);
         scene.getStylesheets().add("/styles/Styles.css");

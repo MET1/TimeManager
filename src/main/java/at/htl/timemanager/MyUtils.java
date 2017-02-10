@@ -1,4 +1,4 @@
-package at.htl.filereader;
+package at.htl.timemanager;
 
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
