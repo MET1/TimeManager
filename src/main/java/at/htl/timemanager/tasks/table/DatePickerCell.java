@@ -8,6 +8,11 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.Date;
 
+/**
+ * @timeline .
+ * 05.12.2016: MET 001  created class
+ * 05.12.2016: MET 050  DatePickerCell: update Item, createDatePicker
+ */
 public class DatePickerCell extends TableCell<Task, Date> {
 
     private DatePicker datePicker;

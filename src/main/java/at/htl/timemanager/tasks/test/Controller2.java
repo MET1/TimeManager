@@ -6,7 +6,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 /**
- * @timeline .
  * 15.12.2015: MET 001  2200  created class
  * 19.12.2015: MET 010  2200  determining the Controls and initialisation of the GUI
  * 13.02.2016: MET 040  2200  simple filling of the TableView from the captured obsData

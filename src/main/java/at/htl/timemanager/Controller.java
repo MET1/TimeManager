@@ -62,6 +62,9 @@ import static javafx.stage.FileChooser.ExtensionFilter;
  * 29.05.2016: MET 001  To Do: Import CSV, Syntax, Diagram-Labels
  * 16.06.2016: MET 040  choose file: set extension filter, bug-fix, message
  * 16.06.2016: MET 015  fixed TableView-Error when updating
+ * 05.12.2016: MET 100  setTasks: Columns
+ * 12.12.2016: MET 040  color
+ * 12.12.2016: MET 020  generate Milestones
  */
 public class Controller implements Initializable {
 
@@ -435,8 +438,8 @@ public class Controller implements Initializable {
     private void setTasks() {
         tvTasks.setEditable(true);
 
-        //List<String[]> list = MyFile.getTasks(MyFile.readFromCsvFile("/Users/MET/IdeaProjects/SYP/Tasks.csv"));
-        List<String[]> list = GoogleSheetsAPI.getInstance().getData();
+        List<String[]> list = MyFile.getTasks(MyFile.readFromCsvFile("/Users/MET/IdeaProjects/SYP/Tasks.csv"));
+        //List<String[]> list = GoogleSheetsAPI.getInstance().getData();
         System.out.println(list.size());
         list.remove(0);
         ObservableList<Task> tasks = FXCollections.observableArrayList();

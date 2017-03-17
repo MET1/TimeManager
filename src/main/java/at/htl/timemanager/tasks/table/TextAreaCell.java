@@ -12,6 +12,11 @@ import javafx.util.Callback;
 import javafx.util.StringConverter;
 import javafx.util.converter.DefaultStringConverter;
 
+/**
+ * @timeline .
+ * 05.12.2016: MET 001  created class
+ * 05.12.2016: MET 090  TextAreaCell: createTextArea, update Item
+ */
 public class TextAreaCell<S, T> extends TableCell<S, T> {
 
     private TextArea textArea;

@@ -12,7 +12,12 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
-
+/**
+ * @timeline .
+ * 14.11.2016: MET 001  created class
+ * 14.11.2016: MET 150  Google-Sheet-API
+ * 14.11.2016: MET 040  Google-Sheet-API: Fetch the cell feed of the worksheet.
+ */
 public class GoogleSheetsAPI {
 
     public static final String GOOGLE_ACCOUNT_USERNAME = "registrierkassaapp@gmail.com";

@@ -4,6 +4,11 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * @timeline .
+ * 07.11.2016: MET 001  created class
+ * 07.11.2016: MET 010  Entity Task
+ */
 public class Task {
 
     private String number;

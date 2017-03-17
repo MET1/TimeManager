@@ -6,6 +6,11 @@ import javax.mail.internet.MimeMessage;
 import java.io.UnsupportedEncodingException;
 import java.util.Properties;
 
+/**
+ * @timeline .
+ * 07.11.2016: MET 001  created class
+ * 07.11.2016: MET 030  E-Mail-Service
+ */
 public class EmailService {
 
     private static final String ADDRESS = "met.timemanager@gmail.com";
