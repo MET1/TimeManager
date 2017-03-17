@@ -85,15 +85,19 @@ public class MyFile {
      * @param syntax sequence of the obsData
      * @return obsData
      */
-    public static List<String[]> getData(List<File> files, String syntax) {
+    public static List<String[]> getData(List<File> files, String[] syntax) {
         List<String[]> data = new LinkedList<>();
         if (files == null || files.size() == 0) {
             System.out.println("There are no items in list of files");
             return null;
-        } else if (syntax == null || syntax.length() == 0) {
-            syntax = DEFAULT_SYNTAX;
+        } else if (syntax == null || syntax.length == 0) {
+            syntax = new String[4];
+            syntax[0] = DEFAULT_COMMEND_BEGIN;
+            syntax[1] = DEFAULT_TIMELINE_BEGIN;
+            syntax[2] = DEFAULT_SYNTAX;
+            syntax[3] = DEFAULT_COMMEND_END;
         }
-        String[] separators = syntax.split("\\[|\\]");
+        String[] separators = syntax[2].split("\\[|\\]");
         for (File file : files) {
             if (!file.canRead()) {
                 System.out.println(file.getPath() + " failed to read.");
@@ -109,11 +113,11 @@ public class MyFile {
                 in = new BufferedReader(new FileReader(file.getPath()));
                 String line = null;
                 while ((line = in.readLine()) != null) {
-                    if (!isCommend && line.startsWith(DEFAULT_COMMEND_BEGIN)) {
+                    if (!isCommend && line.startsWith(syntax[0])) {
                         isCommend = true;
-                    } else if (isCommend && line.startsWith(DEFAULT_TIMELINE_BEGIN)) {
+                    } else if (isCommend && line.startsWith(syntax[1])) {
                         timeline = true;
-                    } else if (isCommend && line.startsWith(DEFAULT_COMMEND_END)) {
+                    } else if (isCommend && line.startsWith(syntax[3])) {
                         isCommend = false;
                         timeline = false;
                     } else if (timeline) {

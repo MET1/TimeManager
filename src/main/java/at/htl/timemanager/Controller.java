@@ -116,6 +116,7 @@ public class Controller implements Initializable {
     @FXML
     private PieChart pieChart;
     //endregion
+
     //region Tasks
     @FXML
     private Tab tabTasks;
@@ -228,7 +229,8 @@ public class Controller implements Initializable {
             List<String> extensions = new ArrayList<>(Arrays.asList(settings[0].split(", ")));
             List<File> files = MyFile.getFilteredFiles(new File(tfSourcePath.getText()), extensions);
             System.out.println(files.size() + " files filtered");
-            data = MyFile.getFormattedData(MyFile.getData(files, null));
+            String[] syntax = Arrays.copyOfRange(settings, 1, settings.length);;
+            data = MyFile.getFormattedData(MyFile.getData(files, syntax));
             header = new String[]{"File", "Date", "Name", "Time", "Description"};
         }
         dataAll = data;
